@@ -55,8 +55,8 @@ AFRAME.registerComponent("markerhandler", {
     var buttonDiv = document.getElementById("button-div");
     buttonDiv.style.display = "none";
   },
-  //get the dishes collection from firestore database
-  getDishes: async function () {
+
+  getToys: async function () {
     return await firebase
       .firestore()
       .collection("toys")
