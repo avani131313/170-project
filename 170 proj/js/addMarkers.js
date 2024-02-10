@@ -43,8 +43,8 @@ AFRAME.registerComponent("create-markers", {
       titlePlane.setAttribute("material", { color: "#F0C30F" });
       mainPlane.appendChild(titlePlane);
 
-      // Dish title
-      var dishTitle = document.createElement("a-entity");
+      
+      var toyTitle = document.createElement("a-entity");
       toyTitle.setAttribute("id", `toy-title-${toy.id}`);
       toyTitle.setAttribute("position", { x: 0, y: 0, z: 0.1 });
       toyTitle.setAttribute("rotation", { x: 0, y: 0, z: 0 });
@@ -58,7 +58,7 @@ AFRAME.registerComponent("create-markers", {
       });
       titlePlane.appendChild(toyTitle);
 
-      // Ingredients List
+     
       var info = document.createElement("a-entity");
       info.setAttribute("id", `info-${toy.id}`);
       info.setAttribute("position", { x: 0.3, y: 0, z: 0.1 });
@@ -75,7 +75,7 @@ AFRAME.registerComponent("create-markers", {
     })
     
   },
-  getDishes: async function(){
+  getToys: async function(){
     return await firebase
       .firestore()
       .collection("toys")
